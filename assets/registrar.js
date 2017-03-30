@@ -4,6 +4,7 @@ window.onload=function(){
     this.apellido=apellido;
     this.correo=correo;
     this.contrasena=contrasena;
+    //aqui cambie la contrasena por password
   }
   var registrar=document.getElementById("registrar");
   registrar.addEventListener("click",function(){
@@ -20,9 +21,9 @@ window.onload=function(){
       advertencia.innerHTML="";
       console.log(new Registrando(nombre,apellido,correo,contrasena));
       localStorage.setItem("coderNew",JSON.stringify(new Registrando(nombre,apellido,correo,contrasena)));
-
+        console.log(contrasena);
         //formulario.reset();
-        window.location.href="editar.html";
+        window.location.href="coderInfo.html";
 
     }
 
@@ -84,4 +85,5 @@ var contrasena=document.getElementById("password");
     }
   }
 contrasena.onblur=validarContrasena;
+
 };
